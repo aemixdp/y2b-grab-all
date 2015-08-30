@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <style>
+        html, body { margin: 0; height: 100%; }
+        * { text-align: center; }
+        button { width: 100px; margin-top: 6px; }
+        button:enabled:hover { cursor: pointer; }
+        #errors a { color: red; }
+    </style>
+</head>
+<body>
+    <button id="authorize"
+            disabled="true">
+        authorize
+    </button>
+    <br>
+    <input type="radio" name="type" value="username" checked>username
+    <input type="radio" name="type" value="channel">channel
+    <br>
+    <input id="usernameOrChannel"
+           type="text"
+           size="30"
+           placeholder="y2b username or channel"
+           disabled="true">
+    <br>
+    <input id="playlist"
+           type="text"
+           size="30"
+           placeholder="title for your new playlist"
+           disabled="true">
+    <br>
+    <button id="grab"
+            disabled="true"
+            onclick="grabAll()">
+        grab all
+    </button>
+    <br>
+    <span id="videosProcessed">?</span> /
+    <span id="totalVideos">?</span>
+    <div id="errors"></div>
+</body>
+</html>
